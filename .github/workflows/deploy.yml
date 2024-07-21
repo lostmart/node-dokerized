@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Docker image
-        run: docker build -t my-express-app .
+        run: docker build -t "${{ secrets.DOCKER_USERNAME }}"/my-express-app .
 
       - name: Log in to Docker Hub
         env:
